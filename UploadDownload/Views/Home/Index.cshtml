@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("UploadFile",
+       "Home",
+       FormMethod.Post,
+       new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="dieDatei" />
+    <input type="submit" />
+}

@@ -1,0 +1,15 @@
+﻿@using System.IO
+@model FileInfo[]
+
+@{
+    ViewData["Title"] = "ShowFiles";
+}
+
+<h2>ShowFiles</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Name - @item.Length bytes</li>
+    }
+</ul>
