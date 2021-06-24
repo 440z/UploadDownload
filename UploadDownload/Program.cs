@@ -19,7 +19,7 @@ namespace UploadDownload
         {
             // install-package Microsoft.Extensions.Logging.Console
             //loggerFactory = new LoggerFactory().AddConsole((categoryName, logLevel) => (logLevel == LogLevel.Information) && (categoryName == DbLoggerCategory.Database.Command.Name));
-            loggerFactory = new LoggerFactory().
+            //loggerFactory = new LoggerFactory().
         }
 
         public static void Main(string[] args)
