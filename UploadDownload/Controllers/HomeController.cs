@@ -28,8 +28,9 @@ namespace UploadDownload.Controllers
             }
 
             string path = Path.Combine(Directory.GetCurrentDirectory(), uploadPath, Path.GetFileName(dieDatei.FileName));
+            
 
-            using (FileStream stream = new FileStream(path, FileMode.Create))
+            using (FileStream stream = new FileStream(path, FileMode.Create)) // Das Problem war, dass der UploadFolder gefehlt hat
             {
                 dieDatei.CopyTo(stream);
             }
