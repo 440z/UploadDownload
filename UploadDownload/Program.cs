@@ -14,11 +14,11 @@ namespace UploadDownload
     public class Program
     {
         ILoggerFactory loggerFactory;
-
+        
         public Program()
         {
             // install-package Microsoft.Extensions.Logging.Console
-            //loggerFactory = new LoggerFactory().AddConsole((categoryName, logLevel) => (logLevel == LogLevel.Information) && (categoryName == DbLoggerCategory.Database.Command.Name));
+            loggerFactory = new LoggerFactory().AddDebug((categoryName, logLevel) => (logLevel == LogLevel.Information) && (categoryName == DbLoggerCategory.Database.Command.Name));
             //loggerFactory = new LoggerFactory().
         }
 
