@@ -2,11 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 
+<br />
+<p>start Rederbody</p>
 @using (Html.BeginForm("UploadFile",
-       "Home",
-       FormMethod.Post,
-       new { enctype = "multipart/form-data" }))
+     "Home",
+     FormMethod.Post,
+     new { enctype = "multipart/form-data" }))
 {
     <input type="file" name="dieDatei" />
     <input type="submit" />
 }
+<p>ende Rederbody</p>
+<br />
