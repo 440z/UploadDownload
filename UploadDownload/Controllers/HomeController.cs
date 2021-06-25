@@ -12,7 +12,8 @@ namespace UploadDownload.Controllers
 {
     public class HomeController : Controller
     {
-        private const string uploadPath = "UploadFolder";
+        //private const string uploadPath = "UploadFolder";
+        private const string uploadPath = @"C:\Users\Windows10\OneDrive - IT-Akademie Dr. Heuer GmbH\git\UploadDownload\UploadDownload\UploadDownload\UploadFolder\";
 
         public IActionResult Index()
         {
@@ -27,6 +28,7 @@ namespace UploadDownload.Controllers
                 return Content("Keine Datei ausgewählt oder die Datei ist leer");
             }
 
+            
             string path = Path.Combine(Directory.GetCurrentDirectory(), uploadPath, Path.GetFileName(dieDatei.FileName));
             
 
